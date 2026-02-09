@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+export const isValidTransition = (fromStatus, toStatus) => {
+    const allowed = transitions[fromStatus] || [];
+    return allowed.includes(toStatus);
+}
     <View
         android:id="@+id/header"
         android:layout_width="match_parent"
